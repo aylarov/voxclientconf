@@ -1,0 +1,155 @@
+html, body {
+	display: flex;
+	align-items: center;
+  justify-content: center;  	
+  height: 100%;
+  width: 100%;
+}
+
+#app.conference {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tip {
+  font-size: 16pt;
+}
+
+div.ex-container {
+  display: flex;
+  height: 100%;
+}
+
+#container {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+}
+
+div.loginForm {
+	width: 400px;
+	text-align: center;
+}
+
+h4.modal-title {
+  padding-left: 32px;
+  background: url(./img/icon.png) no-repeat left center;
+  background-size: 28px 28px;
+}
+
+.spinner2 {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.spinner2 > div {
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner2 .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner2 .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes glow {
+    to {
+         border-color: #000;
+    -webkit-box-shadow: 0 0 5px #000;
+       -moz-box-shadow: 0 0 5px #000;
+            box-shadow: 0 0 5px #000;
+    }
+}
+
+@keyframes glow {
+  to {
+         border-color: #000;
+    -webkit-box-shadow: 0 0 5px #000;
+       -moz-box-shadow: 0 0 5px #000;
+            box-shadow: 0 0 5px #000;
+    }
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+  margin-right: 5px;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+  animation: spin 2s infinite linear;
+  -webkit-animation: spin2 2s infinite linear;
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}

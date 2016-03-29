@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"jsx": "react",
+		"sourceMap": true
+	},
+	"files": [
+		"src/typings/main.d.ts",
+		"src/app.tsx"
+	]
+}
